@@ -1,3 +1,5 @@
+import os
+
 import certifi
 from dotenv import load_dotenv
 from fastapi import FastAPI
