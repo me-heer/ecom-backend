@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 from fastapi import FastAPI
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-from routes import get_products, create_order
 
 app = FastAPI()
 
@@ -20,6 +19,9 @@ client = MongoClient(uri, server_api=ServerApi('1'), tlsCAFile=certifi.where())
 ecom_db = client.get_database('ecommerce')
 products_collection = ecom_db["products"]
 orders_collection = ecom_db["orders"]
+
+# Import routes
+from routes import get_products, create_order
 
 app.include_router(get_products.router)
 app.include_router(create_order.router)
