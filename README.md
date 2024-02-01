@@ -1,5 +1,12 @@
 A sample backend application in FastAPI, Python and MongoDB
 
+### Installation
+```bash
+git clone https://github.com/me-heer/ecom-backend.git
+cd ecom-backend
+pip install -r requirements.txt
+```
+
 ### Sample API Calls
 #### Get Products
 ```bash
