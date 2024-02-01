@@ -1,12 +1,19 @@
 import certifi
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 app = FastAPI()
 
-# TODO: From .env
-uri = "mongodb+srv://mihir67mj:njtJ0K3JTYGSnxa5@cluster0.ksbp6er.mongodb.net/?retryWrites=true&w=majority"
+load_dotenv()
+
+app = FastAPI()
+
+# Use environment variable for MongoDB connection string
+uri = os.getenv("MONGO_URI")
+if uri is None:
+    raise ValueError("MongoDB connection string not found in .env file")
 
 client = MongoClient(uri, server_api=ServerApi('1'), tlsCAFile=certifi.where())
 ecom_db = client.get_database('ecommerce')
