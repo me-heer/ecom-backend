@@ -18,7 +18,7 @@ Content-Type: application/json
 
 {
   "items": [
-    {"product_id": "65b77503b064d441b7d4c2b7", "bought_quantity": 0}
+    {"product_id": "65b77503b064d441b7d4c2b7", "bought_quantity": 99}
   ],
   "user_address": {
     "city": "Cityville",
