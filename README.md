@@ -4,8 +4,15 @@ A sample backend application in FastAPI, Python and MongoDB
 ```bash
 git clone https://github.com/me-heer/ecom-backend.git
 cd ecom-backend
-pip install -r requirements.txt
+pip3 install -r requirements.txt
+uvicorn main:app
 ```
+After uvicorn main:app, the server runs on `http://127.0.0.1:8000`.
+
+Copy and paste the sample curl calls below and test the output.
+
+You don't need to install MongoDB, since this app will connect to a test instance of MongoDB Atlas with sample data.
+The connection string of MongoDB is purposefully pushed to this repository for ease of access while testing this.
 
 ### Sample API Calls
 #### Get Products
