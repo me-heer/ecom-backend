@@ -1,0 +1,28 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/hello/Mihir
+Accept: application/json
+
+###
+GET http://127.0.0.1:8000/products?limit=2
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {"product_id": "65b77503b064d441b7d4c2b7", "bought_quantity": 0}
+  ],
+  "user_address": {
+    "city": "Cityville",
+    "country": "Countryland",
+    "zip_code": "12345"
+  }
+}
