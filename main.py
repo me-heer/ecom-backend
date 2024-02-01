@@ -10,8 +10,6 @@ app = FastAPI()
 
 load_dotenv()
 
-app = FastAPI()
-
 # Use environment variable for MongoDB connection string
 uri = os.getenv("MONGO_URI")
 if uri is None:
